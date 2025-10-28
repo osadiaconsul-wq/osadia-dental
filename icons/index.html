@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OSADÍA Consultorio Dental | Nezahualcóyotl</title>
+  <meta name="description" content="Odontología integral, limpiezas, resinas, endodoncia y más. Agenda por WhatsApp. Av. México 263, Las Fuentes, Nezahualcóyotl, Méx." />
+  <meta name="theme-color" content="#12C4A7" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="OSADÍA Consultorio Dental" />
+  <meta property="og:description" content="Sonríe con confianza. Agenda tu valoración hoy mismo por WhatsApp." />
+  <meta property="og:image" content="osadia-logo.jpg" />
+  <meta property="og:url" content="https://tudominio.com" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Helvetica','Arial','Noto Sans','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'] },
+          colors: {
+            brand:{50:'#E6FCF7',100:'#C1F6EA',200:'#97EEDC',300:'#6BE6CD',400:'#36D9BC',500:'#12C4A7',600:'#0EA18A',700:'#0C8673',800:'#0A6C5D',900:'#084E43'},
+            accent:{100:'#FFE1EB',200:'#FFB5CD',300:'#FF8AB0',400:'#FF6A9C',500:'#FF4D88',600:'#E23D75',700:'#C12F62',800:'#9E264F',900:'#7C1D3F'}
+          },
+          boxShadow:{ soft:'0 10px 30px -12px rgba(16,24,40,.1)'}
+        }
+      }
+    }
+  </script>
+ <link rel="icon" type="image/x-icon" href="corazon-rosa.ico">
+  <style>
+    html{scroll-behavior:smooth}
+    .reveal{opacity:0;transform:translateY(16px);transition:all .6s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
+
+<style>
+  :root { --anchor-offset: 160px; }          /* valor de respaldo */
+  .anchor { scroll-margin-top: var(--anchor-offset); }
+</style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Dentist",
+    "name":"OSADÍA Consultorio Dental",
+    "image":"https://tudominio.com/og-image.jpg",
+    "url":"https://tudominio.com",
+    "telephone":"+52 55 2482 8819",
+    "address":{"@type":"PostalAddress","streetAddress":"Av. México 263, Las Fuentes","addressLocality":"Nezahualcóyotl","addressRegion":"México","postalCode":"57600","addressCountry":"MX"},
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"18:00"}],
+    "priceRange":"$$"
+  }
+  </script>
+
+  <!-- Analytics (reemplaza IDs) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-XXXXXXXXXX');
+    gtag('config','AW-YYYYYYYYY');
+  </script>
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','000000000000000');fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"/></noscript>
+
+  <!-- TODO: Actualiza con tu dominio real -->
+  <link rel="canonical" href="https://tudominio.com">
+<style>
+  .svcItem{display:flex;align-items:center;gap:.65rem;padding:.38rem .25rem;border-radius:.9rem}
+  .svcItem:hover{color:#0C8673;background:rgba(18,196,167,.06)}
+  .svcIcon{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9999px;background:#E6F0FE}
+  .svcSvg{width:18px;height:18px}
+</style>
+</head>
+
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Barra aviso promoción -->
+<div id="promoBar" class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-accent-500 to-brand-600 text-white text-sm md:text-base py-3 text-center shadow-md">
+  <strong class="font-semibold">Promo:</strong>
+  <span class="font-extrabold underline decoration-white/60">Primera valoración GRATIS</span>
+  <span class="hidden sm:inline"> · Agenda por WhatsApp.</span>
+</div>
+
+  <!-- Header -->
+  <header id="navbar" class="sticky top-8 z-40 backdrop-blur bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="OSADÍA Consultorio Dental">
+        <img id="logo" src="./osadia-logo.jpg" alt="OSADÍA Consultorio Dental"
+             class="h-[10rem] w-auto rounded-lg transition-all duration-300 ease-in-out" />
+        <span class="sr-only">OSADÍA Consultorio Dental</span>
+      </a>
+
+<!-- NAV DESKTOP -->
+<nav class="hidden md:flex items-center text-[15px] font-medium tracking-wide text-slate-800 relative whitespace-nowrap">
+
+<!-- fila interna para normalizar el espacio entre items -->
+<div class="flex items-center space-x-3">
+
+  <!-- Nosotros y Equipo -->
+  <a href="#nosotros" class="navlink hover:text-brand-700 inline-flex items-center">Nosotros</a>
+  <a href="#equipo" class="navlink hover:text-brand-700 inline-flex items-center">Equipo</a>
+
+  <!-- Dropdown Servicios -->
+  <div class="relative shrink-0">
+
+<button id="svcBtn"
+  class="hover:text-brand-700 inline-flex items-center gap-2 pr-1 focus:outline-none"
+  aria-haspopup="true" aria-expanded="false" aria-controls="svcPanel">
+  Servicios <span aria-hidden="true">▾</span>
+</button>
+
+<!-- Panel -->
+<div id="svcPanel"
+     class="hidden opacity-0 translate-y-2 transition-all duration-200
+            absolute left-1/2 -translate-x-1/2 mt-3 w-[920px] max-w-[95vw] will-change-transform z-50"
+     role="menu">
+  <div class="rounded-2xl border border-slate-200 bg-white shadow-[0_10px_30px_-8px_rgba(0,0,0,0.12)] p-6 backdrop-blur-sm">
+    <div class="grid sm:grid-cols-3 gap-8 text-sm">
+
+      <!-- Clínicos -->
+      <div>
+        <p class="text-xs font-semibold tracking-wide text-slate-500 mb-3">Tratamientos Clínicos</p>
+        <ul class="grid gap-2">
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/diagnostico-360.svg" alt=""></span> Diagnóstico 360°</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/implantes.svg" alt=""></span> Implantes</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/limpieza.svg" alt=""></span> Limpieza dental</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/coronas.svg" alt=""></span> Coronas dentales</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/resinas.svg" alt=""></span> Resinas dentales</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/cirugia-maxilofacial.svg" alt=""></span> Cirugía Maxilofacial</a></li>
+          <li><a class="svcItem" href="endodoncia.html"><span class="svcIcon"><img class="svcSvg" src="icons/endodoncia.svg" alt=""></span> Endodoncia</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/periodoncia.svg" alt=""></span> Periodoncia</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/guarda-oclusal.svg" alt=""></span> Guarda oclusal</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/puentes.svg" alt=""></span> Puentes dentales</a></li>
+        </ul>
+      </div>
+
+      <!-- Estéticos -->
+      <div>
+        <p class="text-xs font-semibold tracking-wide text-slate-500 mb-3">Tratamientos Estéticos</p>
+        <ul class="grid gap-2">
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/alineadores.svg" alt=""></span> Alineadores</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/invisalign.svg" alt=""></span> Invisalign</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/clear-correct.svg" alt=""></span> Clear Correct</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/brackets.svg" alt=""></span> Brackets</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/blanqueamiento.svg" alt=""></span> Blanqueamiento</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/carillas.svg" alt=""></span> Carillas</a></li>
+        </ul>
+      </div>
+
+      <!-- Infantiles -->
+      <div>
+        <p class="text-xs font-semibold tracking-wide text-slate-500 mb-3">Tratamientos Infantiles</p>
+        <ul class="grid gap-2">
+          <li><a class="svcItem" href="odontopediatria.html"><span class="svcIcon"><img class="svcSvg" src="icons/limpieza-ninos.svg" alt=""></span> Limpieza dental para niños</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/selladores.svg" alt=""></span> Selladores</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/ortopedia.svg" alt=""></span> Ortopedia</a></li>
+          <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/extractores.svg" alt=""></span> Extractores</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Resto del menú -->
+  <a href="#precios" class="navlink hover:text-brand-700 inline-flex items-center">Precios</a>
+  <a href="#opiniones" class="navlink hover:text-brand-700 inline-flex items-center">Testimonios</a>
+  <a href="#faq" class="navlink hover:text-brand-700 inline-flex items-center">FAQ</a>
+  <a href="#contacto" class="navlink hover:text-brand-700 inline-flex items-center">Contacto</a>
+</div>
+</nav>
+
+
+      <div class="hidden md:flex items-center gap-2">
+        <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 transition shadow-sm">
+          <!-- WhatsApp icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.01 0C5.48 0 .2 5.28.2 11.8c0 2.08.56 4.1 1.62 5.9L0 24l6.48-1.68a11.8 11.8 0 0 0 5.52 1.4h.01c6.53 0 11.8-5.28 11.8-11.8 0-3.15-1.23-6.11-3.29-8.17ZM12 21.15h-.01c-1.86 0-3.68-.5-5.27-1.45l-.38-.22-3.85 1 1.03-3.75-.25-.39A9.8 9.8 0 0 1 2.2 11.8C2.2 6.39 6.6 2 12 2a9.6 9.6 0 0 1 6.78 2.81A9.6 9.6 0 0 1 21.8 11.8c0 5.41-4.4 9.8-9.8 9.8Zm5.32-7.47c-.29-.14-1.73-.86-1.99-.96-.27-.1-.47-.14-.67.14-.19.28-.77.95-.94 1.14-.17.19-.35.21-.65.07-.29-.14-1.22-.45-2.33-1.44-.86-.76-1.45-1.7-1.62-1.99-.17-.29-.02-.45.13-.59.14-.14.29-.35.43-.52.14-.17.19-.28.29-.48.1-.19.05-.36-.02-.5-.07-.14-.67-1.6-.92-2.19-.24-.58-.49-.5-.67-.5-.17 0-.36-.02-.55-.02-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.43 1.03 2.81 1.17 3 .14.19 2.03 3.1 4.92 4.33.69.3 1.22.48 1.64.61.69.22 1.31.19 1.8.12.55-.08 1.73-.71 1.98-1.4.24-.69.24-1.28.17-1.4-.07-.12-.26-.2-.55-.34Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="tel:+525524828819" class="inline-flex items-center px-4 py-2 rounded-xl border border-slate-300 hover:border-slate-400">Llamar</a>
+        <button id="themeToggle" class="p-2 rounded-lg border border-slate-300 hover:border-slate-400" aria-label="Cambiar tema">🌓</button>
+      </div>
+
+      <!-- Botón menú móvil -->
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-300" aria-label="Abrir menú">☰</button>
+    </div>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="px-4 py-3 grid gap-3 text-sm">
+        <!-- Acordeón Servicios -->
+        <details class="rounded-xl border border-slate-200 dark:border-slate-800 p-3">
+          <summary class="font-medium cursor-pointer">Servicios</summary>
+          <ul class="mt-2 grid gap-2 pl-2">
+            <li><a class="block py-1" href="#servicios">Diagnóstico 360°</a></li>
+            <li><a class="block py-1" href="#servicios">Implantes</a></li>
+            <li><a class="block py-1" href="#servicios">Limpieza dental</a></li>
+            <li><a class="block py-1" href="#servicios">Coronas dentales</a></li>
+            <li><a class="block py-1" href="#servicios">Resinas dentales</a></li>
+            <li><a class="block py-1" href="#servicios">Cirugía Maxilofacial</a></li>
+            <li><a class="block py-1" href="endodoncia.html">Endodoncia</a></li>
+            <li><a class="block py-1" href="#servicios">Periodoncia</a></li>
+            <li><a class="block py-1" href="#servicios">Guarda oclusal</a></li>
+            <li><a class="block py-1" href="#servicios">Puentes dentales</a></li>
+            <li><a class="block py-1" href="#servicios">Alineadores</a></li>
+            <li><a class="block py-1" href="#servicios">Invisalign</a></li>
+            <li><a class="block py-1" href="#servicios">Clear Correct</a></li>
+            <li><a class="block py-1" href="#servicios">Brackets</a></li>
+            <li><a class="block py-1" href="#servicios">Blanqueamiento</a></li>
+            <li><a class="block py-1" href="#servicios">Carillas</a></li>
+            <li><a class="block py-1" href="odontopediatria.html">Limpieza dental para niños</a></li>
+            <li><a class="block py-1" href="#servicios">Selladores</a></li>
+            <li><a class="block py-1" href="#servicios">Ortopedia</a></li>
+            <li><a class="block py-1" href="#servicios">Extractores</a></li>
+          </ul>
+        </details>
+
+        <a href="#equipo" class="hover:text-brand-700">Equipo</a>
+        <a href="#precios" class="hover:text-brand-700">Precios</a>
+        <a href="#opiniones" class="hover:text-brand-700">Testimonios</a>
+        <a href="#faq" class="hover:text-brand-700">FAQ</a>
+        <a href="#contacto" class="hover:text-brand-700">Contacto</a>
+        <div class="flex gap-2">
+          <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 transition shadow-sm w-max">WhatsApp</a>
+          <a href="tel:+525524828819" class="inline-flex items-center px-4 py-2 rounded-xl border border-slate-300 hover:border-slate-400 w-max">Llamar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center py-16 md:py-24">
+      <div class="reveal">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          Sonríe con <span class="text-brand-600">OSADÍA</span>
+        </h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          Odontología integral con trato humano en Nezahualcóyotl. Limpiezas, resinas, endodoncia, rehabilitación y más.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 transition shadow">Agendar por WhatsApp</a>
+          <a href="#servicios" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Ver servicios</a>
+          <a href="https://www.google.com.mx/search?sca_esv=a95b1a567a7f3cbf&authuser=0&hl=es-419&gl=mx&sxsrf=AE3TifO3hOZldgOTLKjKUw04fwWMf8Gx4A:1759862872594&kgmid=/g/11x10x0r03&q=OSAD%C3%8DA+Consultorio+Dental&shndl=30&shem=lcuae,uaasie,shrtn&source=sh/x/loc/uni/m1/1&kgs=1b63ad3735af7015&utm_source=lcuae,uaasie,shrtn,sh/x/loc/uni/m1/1" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Opiniones en Google</a>
+        </div>
+        <ul class="mt-6 text-sm text-slate-500 dark:text-slate-400 grid gap-1">
+          <li>• Ubicación: Av. México 263, Las Fuentes, 57600 Nezahualcóyotl, Méx.</li>
+          <li>• Horario: Lun, Mar, Jue, Vie, Sáb y Dom 10:00–18:00 · Miércoles cerrado</li>
+          <li>• Tel: <a href="tel:+525524828819" class="underline">55 2482 8819</a></li>
+        </ul>
+      </div>
+      <div class="relative reveal">
+        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-50 to-white border border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft">
+          <img src="./consultorio.webp" alt="Sonrisa saludable en consultorio dental" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -right-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-soft hidden sm:block">
+          <p class="text-sm font-medium">Primera valoración</p>
+          <p class="text-2xl font-extrabold text-brand-700">GRATIS</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Aplican restricciones</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- NOSOTROS (con efecto parallax) -->
+<section id="nosotros" 
+  class="anchor relative py-32 bg-fixed bg-center bg-cover text-white"
+  style="background-image: url('./consultorio1.jpg');">
+  <!-- Capa oscura para legibilidad -->
+  <div class="absolute inset-0 bg-slate-900/70"></div>
+
+  <!-- Contenido -->
+  <div class="relative max-w-5xl mx-auto text-center px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Nosotros</h2>
+    <p class="text-lg md:text-xl leading-relaxed mb-6 text-slate-100">
+      En <strong>OSADÍA Consultorio Dental</strong> creemos que una sonrisa sana transforma vidas.
+      Nuestro compromiso es ofrecer atención odontológica integral con calidez, transparencia y profesionalismo.
+    </p>
+    <p class="text-base md:text-lg leading-relaxed mb-8 text-slate-200">
+      Creamos un espacio donde cada paciente recibe un trato cercano y personalizado,
+      combinando tecnología de vanguardia con un ambiente humano y relajado.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="nosotros.html"
+         class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 transition shadow-soft text-white font-semibold">
+         Conócenos más
+      </a>
+      <a href="#equipo"
+         class="px-6 py-3 rounded-xl border border-white/70 hover:bg-white/10 transition font-semibold">
+         Conoce nuestro equipo
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Servicios -->
+  <section id="servicios" class="anchor py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <h2 class="text-3xl font-bold">Servicios dentales</h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">Tratamientos integrales para toda la familia.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+          <img src="./profilaxis.jpg" alt="Profilaxis" class="w-full h-52 object-cover rounded-lg mb-3"/>
+          <h3 class="font-semibold">Limpieza y profilaxis</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Elimina sarro y placa, incluye pulido y recomendaciones personalizadas.</p>
+        </article>
+<a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+          <img src="./resina.jpg" alt="Resinas estéticas" class="w-full h-52 object-cover rounded-lg mb-3"/>
+          <h3 class="font-semibold">Resinas estéticas</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Restauraciones del color del diente con acabado natural.</p>
+        </article>
+<a href="endodoncia.html" class="block hover:scale-[1.02] transition-transform">
+        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+          <img src="./endodoncia.jpg" alt="Endodoncia" class="w-full h-52 object-cover rounded-lg mb-3"/>
+          <h3 class="font-semibold">Endodoncia</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Tratamiento de conductos para conservar piezas con dolor o infección.</p>
+        </article>
+</a>
+<a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+          <img src="./ortodoncia.jpg" alt="Ortodoncia" class="w-full h-52 object-cover rounded-lg mb-3"/>
+          <h3 class="font-semibold">Ortodoncia</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Alineadores y brackets para corregir malposiciones dentales.</p>
+        </article>
+<a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+          <img src="./protesis.jpg" alt="Prótesis y rehabilitación" class="w-full h-52 object-cover rounded-lg mb-3"/>
+          <h3 class="font-semibold">Prótesis y rehabilitación</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Puentes, coronas e implantes en coordinación con especialistas.</p>
+        </article>
+<a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+          <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+            <img src="./odontopediatria.jpg" alt="Odontopediatría" class="w-full h-52 object-cover rounded-lg mb-3"/>
+            <h3 class="font-semibold">Odontopediatría</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Atención especializada para los más pequeños con técnicas suaves y seguras.</p>
+            </div>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+ <section class="py-10 bg-white text-center">
+  <h2 class="text-3xl font-bold text-gray-900">Tipos de tratamientos</h2>
+  <p class="text-gray-600 mt-2 mb-8">Una mirada rápida a algunos procedimientos.</p>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <!-- Extracciones -->
+    <div>
+      <img src="tratamiento1.jpg" alt="Extracción dental" class="rounded-lg shadow-md mx-auto" />
+      <p class="mt-3 font-semibold text-gray-800">Extracción dental</p>
+    </div>
+
+    <!-- Implantes -->
+    <div>
+      <img src="tratamiento2.jpg" alt="Implantes dentales" class="rounded-lg shadow-md mx-auto" />
+      <p class="mt-3 font-semibold text-gray-800">Implantes dentales</p>
+    </div>
+
+    <!-- Ortodoncia -->
+    <div>
+      <img src="tratamiento3.jpg" alt="Ortodoncia con alineadores" class="rounded-lg shadow-md mx-auto" />
+      <p class="mt-3 font-semibold text-gray-800">Ortodoncia (alineadores)</p>
+    </div>
+
+    <!-- Blanqueamiento -->
+    <div>
+      <img src="tratamiento4.jpg" alt="Blanqueamiento dental" class="rounded-lg shadow-md mx-auto" />
+      <p class="mt-3 font-semibold text-gray-800">Blanqueamiento dental</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Equipo -->
+<section id="equipo" class="anchor py-10 bg-gray-50 text-center">
+  <h2 class="text-3xl font-bold text-gray-900">Nuestro equipo</h2>
+  <p class="text-gray-600 mt-2 mb-8">Trato humano y resultados de calidad.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Dra. Liliana -->
+<div class="relative bg-white rounded-2xl border border-gray-200 p-6 transition-transform duration-500 transform hover:-translate-y-2 hover:scale-[1.02]
+            shadow-[0_6px_10px_rgba(0,0,0,0.1),_inset_0_0_6px_rgba(255,255,255,0.8)] hover:shadow-[0_10px_18px_rgba(0,0,0,0.15),_inset_0_0_8px_rgba(255,255,255,0.9)]">
+  <div class="overflow-hidden rounded-full w-44 h-44 mx-auto border-4 border-white shadow-[0_4px_8px_rgba(0,0,0,0.2)]">
+   <img src="dentista.jpg" alt="Dra. Liliana Paola Cruz Ibañez"
+             class="w-44 h-44 object-cover rounded-full border-4 border-white shadow-md transition-transform duration-500 hover:scale-110" />
+      </div>
+      <h3 class="mt-4 font-semibold text-gray-900">Dra. Liliana Paola Cruz Ibañez</h3>
+      <p class="text-gray-600">Cirujano Dentista · Céd. Prof. 13402061</p>
+    </div>
+
+    <!-- Especialista Endodoncia -->
+  <div class="relative bg-white rounded-2xl border border-gray-200 p-6 transition-transform duration-500 transform hover:-translate-y-2 hover:scale-[1.02]
+            shadow-[0_6px_10px_rgba(0,0,0,0.1),_inset_0_0_6px_rgba(255,255,255,0.8)] hover:shadow-[0_10px_18px_rgba(0,0,0,0.15),_inset_0_0_8px_rgba(255,255,255,0.9)]">
+  <div class="overflow-hidden rounded-full w-44 h-44 mx-auto border-4 border-white shadow-[0_4px_8px_rgba(0,0,0,0.2)]">
+   <img src="dentista1.jpg" alt="Especialista en Endodoncia"
+             class="w-44 h-44 object-cover rounded-full border-4 border-white shadow-md transition-transform duration-500 hover:scale-110" />
+      </div>
+      <h3 class="mt-4 font-semibold text-gray-900">Esp. Endodoncia</h3>
+      <p class="text-gray-600">Tratamientos de conductos con microscopía.</p>
+    </div>
+
+    <!-- Especialista Ortodoncia -->
+<div class="relative bg-white rounded-2xl border border-gray-200 p-6 transition-transform duration-500 transform hover:-translate-y-2 hover:scale-[1.02]
+            shadow-[0_6px_10px_rgba(0,0,0,0.1),_inset_0_0_6px_rgba(255,255,255,0.8)] hover:shadow-[0_10px_18px_rgba(0,0,0,0.15),_inset_0_0_8px_rgba(255,255,255,0.9)]">
+  <div class="overflow-hidden rounded-full w-44 h-44 mx-auto border-4 border-white shadow-[0_4px_8px_rgba(0,0,0,0.2)]">
+   <img src="dentista2.jpg" alt="Especialista en Ortodoncia"
+             class="w-44 h-44 object-cover rounded-full border-4 border-white shadow-md transition-transform duration-500 hover:scale-110" />
+      </div>
+      <h3 class="mt-4 font-semibold text-gray-900">Esp. Ortodoncia</h3>
+      <p class="text-gray-600">Brackets y alineadores transparentes.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Antes & Después -->
+<section id="antes-despues" class="anchor py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <h2 class="text-3xl font-bold">Antes y después</h2>
+      <p class="text-slate-600 dark:text-slate-300 mt-2">Resultados visibles que inspiran confianza.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 reveal">
+        <img class="rounded-xl w-full h-[29rem] object-cover" src="./antes.jpg" alt="Antes" />
+        <p class="mt-3 text-center text-sm text-slate-500 dark:text-slate-400">Caso de resina estética (ejemplo ilustrativo)</p>
+      </div>
+      <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 reveal">
+        <img class="rounded-xl w-full h-[29rem] object-cover" src="./despues.jpg" alt="Después" />
+        <p class="mt-3 text-center text-sm text-slate-500 dark:text-slate-400">Resultado tras tratamiento (ejemplo ilustrativo)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Testimonios -->
+<section id="opiniones" class="anchor py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between gap-4 mb-8">
+      <div>
+        <h2 class="text-3xl font-extrabold text-gray-900">Lo que dicen nuestros pacientes</h2>
+        <p class="text-gray-600">Calidez, claridad y resultados.</p>
+      </div>
+
+      <!-- Botón a Google Reviews -->
+      <a href="https://g.page/r/CXr6W-PRl211EBE/review" target="_blank" rel="noopener"
+         class="shrink-0 inline-flex items-center gap-2 rounded-xl border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-50 hover:shadow transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
+          <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.8 31.7 29.4 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.7 3l5.7-5.7C33.5 5 28.9 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 19.5-7.6 19.5-21 0-1.1-.1-2.2-.3-3.5z"/>
+          <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16.1 18.9 13 24 13c3 0 5.7 1.1 7.7 3l5.7-5.7C33.5 5 28.9 3 24 3 16 3 8.9 7.6 6.3 14.7z"/>
+          <path fill="#4CAF50" d="M24 45c5.2 0 9.9-1.7 13.1-4.7l-6-4.9C29 36.9 26.7 37.8 24 37.8c-5.3 0-9.7-3.4-11.3-8.1l-6.6 5.1C8.8 40.4 15.8 45 24 45z"/>
+          <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-1 2.9-3.9 6.8-11.3 6.8-5.3 0-9.7-3.4-11.3-8.1l-6.6 5.1C8.8 40.4 15.8 45 24 45c10.5 0 19.5-7.6 19.5-21 0-1.1-.1-2.2-.3-3.5z"/>
+        </svg>
+        Ver en Google
+      </a>
+    </div>
+
+    <!-- Carrusel tipo cinta -->
+    <div id="tape" class="relative overflow-hidden">
+      <div id="tape-track" class="flex gap-6">
+        <!-- Tarjeta -->
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-green-500 px-2 py-0.5 rounded-full">NUEVA</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Excelente servicio, muy buen trato y atención. La doctora se mostró muy profesional y me explicó todo claramente. Lo recomiendo bastante!”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Samantha Arenas · hace 1 semana</p>
+          </div>
+        </article>
+
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-green-500 px-2 py-0.5 rounded-full">NUEVA</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Excecelente trato ,la doctora Liliana super amable ,atenta , consultorio muy limpio,muy recomendable buena atención,es mi doctora con los pequeños, excelente trabajo.”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Diana Ayala · hace 1 semana</p>
+          </div>
+        </article>
+
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-green-500 px-2 py-0.5 rounded-full">NUEVA</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Los trabajos realizados a mi esposo y a mí son de excelente calidad. La atención formidable. Lo súper recomiendo, la doctora es muy profesional.”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Cecilia Sánchez · hace 1 semana</p>
+          </div>
+        </article>
+
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-blue-500 px-2 py-0.5 rounded-full">4 meses</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Excelente servicio y atención por la doctora, su equipo y ella son muy profesionales. Atiendo a mi hijo desde los 2 años, explica cada proceso, brinda sugerencias y es muy paciente con los niños. Muy recomendable.”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Lizeth Saavedra</p>
+          </div>
+        </article>
+
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-blue-500 px-2 py-0.5 rounded-full">3 meses</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Excelente atención. El trato siempre fue amable y respetuoso. Me explicaron con claridad cada procedimiento y resolvieron todas mis dudas. Atención personalizada y precios justos. Muy recomendable.”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Leilani Hernández</p>
+          </div>
+        </article>
+
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-blue-500 px-2 py-0.5 rounded-full">1 mes</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Exelente su trabajo lo recomiendo al 100%. El consultorio está muy limpio, la Dra muy amable y explica bien el tratamiento. Precios muy accesibles, muchas gracias por el trabajo.”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Martín Gómez</p>
+          </div>
+        </article>
+
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-blue-500 px-2 py-0.5 rounded-full">3 meses</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Excelente atención por la Odontóloga Paola, explicación muy detallada, excelente ubicación del consultorio y muy cuidadosa. Muy recomendable. 10/10.”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Luis Alberto Suarez Cruz</p>
+          </div>
+        </article>
+
+        <article class="min-w-[86%] sm:min-w-[60%] md:min-w-[48%] lg:min-w-[32%]">
+          <div class="h-full rounded-2xl border border-gray-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-yellow-400 text-xl">★★★★★</div>
+              <span class="text-xs text-white bg-green-500 px-2 py-0.5 rounded-full">NUEVA</span>
+            </div>
+            <p class="text-gray-800 leading-relaxed">
+              “Hoy asistí a una limpieza, la doctora muy amable y la verdad hasta me relajé. La doctora es muy atenta y tiene equipo de primera calidad.”
+            </p>
+            <p class="mt-4 text-sm text-gray-500">— Diana B · hace 2 semanas</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const tape = document.getElementById('tape');
+    const track = document.getElementById('tape-track');
+    track.innerHTML += track.innerHTML;
+    let speed = 0.6, raf, paused = false;
+
+    function step() {
+      if (!paused) {
+        tape.scrollLeft += speed;
+        const half = track.scrollWidth / 2;
+        if (tape.scrollLeft >= half) tape.scrollLeft -= half;
+      }
+      raf = requestAnimationFrame(step);
+    }
+
+    tape.addEventListener('mouseenter', () => paused = true);
+    tape.addEventListener('mouseleave', () => paused = false);
+    let startX = null, startScroll = 0;
+    tape.addEventListener('touchstart', e => { paused = true; startX = e.touches[0].clientX; startScroll = tape.scrollLeft; }, {passive:true});
+    tape.addEventListener('touchmove', e => { if (startX !== null) tape.scrollLeft = startScroll + (startX - e.touches[0].clientX); }, {passive:true});
+    tape.addEventListener('touchend', () => { startX = null; paused = false; });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAnimationFrame(raf); else step(); });
+    step();
+  })();
+</script>
+
+
+  <!-- Precios -->
+  <section id="precios" class="anchor py-16 bg-slate-50 dark:bg-slate-950 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <h2 class="text-3xl font-bold">Precios orientativos</h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">Solicita valoración para cotización exacta.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 reveal">
+          <h3 class="font-semibold">Limpieza</h3>
+          <p class="text-3xl font-extrabold mt-2">$450</p>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Profilaxis + pulido</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 reveal">
+          <h3 class="font-semibold">Resina</h3>
+          <p class="text-3xl font-extrabold mt-2">$400-600</p>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Estética y funcional</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 reveal">
+          <h3 class="font-semibold">Endodoncia</h3>
+          <p class="text-3xl font-extrabold mt-2">$2,500</p>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Incisivo / premolar</p>
+        </div>
+      </div>
+      <div class="text-center mt-8 reveal">
+        <a href="https://wa.me/525524828819?text=Hola%20quiero%20cotizar%20un%20tratamiento" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 inline-block">Pide tu cotización</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="anchor py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center reveal">Preguntas frecuentes</h2>
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <details class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 reveal">
+          <summary class="font-semibold cursor-pointer">¿Atienden con cita el mismo día?</summary>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Sujeto a disponibilidad. Escríbenos por WhatsApp para confirmarte un horario.</p>
+        </details>
+        <details class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 reveal">
+          <summary class="font-semibold cursor-pointer">¿Aceptan pagos con tarjeta?</summary>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Sí, aceptamos tarjetas y transferencias. Emitimos factura.</p>
+        </details>
+        <details class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 reveal">
+          <summary class="font-semibold cursor-pointer">¿Atienden niños?</summary>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Sí, con enfoque de odontopediatría para una experiencia positiva.</p>
+        </details>
+        <details class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 reveal">
+          <summary class="font-semibold cursor-pointer">¿Tienen estacionamiento?</summary>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Hay opciones de estacionamiento en la zona. Pregúntanos por WhatsApp.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="anchor py-16 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
+      <div class="reveal">
+        <h2 class="text-3xl font-bold">Agenda tu cita</h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">Escríbenos por WhatsApp o completa el formulario. ¡Te respondemos pronto!</p>
+
+        <form class="mt-6 grid gap-4" action="https://formsubmit.co/osadiaconsul@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://tudominio.com/gracias" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="Nueva solicitud desde OSADÍA Consultorio Dental" />
+          <input type="text" name="_honey" class="hidden" style="display:none" />
+
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Nombre</span>
+            <input name="nombre" required class="border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-xl px-3 py-2" placeholder="Tu nombre" />
+          </label>
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Teléfono</span>
+            <input name="telefono" required class="border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-xl px-3 py-2" placeholder="55…" />
+          </label>
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Servicio de interés</span>
+            <select name="servicio" class="border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-xl px-3 py-2">
+              <option>Limpieza</option>
+              <option>Resina</option>
+              <option>Endodoncia</option>
+              <option>Ortodoncia</option>
+              <option>Prótesis</option>
+              <option>Odontopediatría</option>
+            </select>
+          </label>
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Mensaje</span>
+            <textarea name="mensaje" rows="4" class="border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-xl px-3 py-2" placeholder="Cuéntanos brevemente…"></textarea>
+          </label>
+          <button class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 w-max">Enviar</button>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Al enviar aceptas ser contactad@ por OSADÍA para agendar o resolver tu solicitud.</p>
+        </form>
+      </div>
+
+      <div class="grid gap-4 reveal">
+        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+          <iframe title="Mapa de ubicación" class="w-full h-72" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+M%C3%A9xico+263,+Las+Fuentes,+57600+Nezahualc%C3%B3yotl,+M%C3%A9x.&output=embed"></iframe>
+        </div>
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <h3 class="font-semibold">Contacto</h3>
+          <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 grid gap-1">
+            <li><strong>Dirección:</strong> Av. México 263, Las Fuentes, 57600 Nezahualcóyotl, Méx.</li>
+            <li><strong>WhatsApp:</strong> <a class="text-brand-700 underline" href="https://wa.me/525524828819" target="_blank" rel="noopener">55 2482 8819</a></li>
+            <li><strong>Horario:</strong> Lun, Mar, Jue, Vie, Sáb y Dom 10:00–18:00 · Miércoles cerrado</li>
+          </ul>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a href="https://www.google.com.mx/search?sca_esv=a95b1a567a7f3cbf&authuser=0&hl=es-419&gl=mx&sxsrf=AE3TifO3hOZldgOTLKjKUw04fwWMf8Gx4A:1759862872594&kgmid=/g/11x10x0r03&q=OSAD%C3%8DA+Consultorio+Dental&shndl=30&shem=lcuae,uaasie,shrtn&source=sh/x/loc/uni/m1/1&kgs=1b63ad3735af7015&utm_source=lcuae,uaasie,shrtn,sh/x/loc/uni/m1/1" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl border border-slate-300 hover:border-slate-400">Google Reviews</a>
+            <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita%20" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Agendar ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie -->
+  <footer class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6 items-center">
+      <p class="text-sm text-slate-500 dark:text-slate-400">© <span id="year"></span> OSADÍA Consultorio Dental · Todos los derechos reservados</p>
+      <div class="flex gap-3 md:justify-end">
+        <a href="#inicio" class="text-sm underline">Volver arriba</a>
+        <a href="mailto:osadiaconsul@gmail.com" class="text-sm underline">osadiaconsul@gmail.com</a>
+        <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="text-sm underline">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="WhatsApp" class="fixed bottom-5 right-5 grid place-items-center w-16 h-16 rounded-full bg-green-500 text-white shadow-lg hover:scale-105 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-9 h-9" fill="currentColor"><path d="M19.11 17.47c-.27-.13-1.6-.79-1.84-.88-.25-.1-.43-.14-.61.14-.18.27-.7.91-.85 1.09-.15.18-.31.2-.58.07-.27-.13-1.1-.43-2.09-1.29-.77-.69-1.3-1.52-1.45-1.78-.15-.26-.02-.41.12-.53.13-.13.26-.32.39-.48.13-.16.18-.26.27-.45.09-.18.05-.34-.02-.47-.07-.13-.6-1.44-.83-1.97-.22-.52-.45-.45-.61-.45-.16 0-.33-.02-.5-.02-.17 0-.45.06-.69.33-.23.26-.92.92-.92 2.23s.95 2.58 1.08 2.76c.13.18 1.87 2.86 4.53 4 .64.28 1.12.45 1.51.56.64.2 1.21.18 1.66.11.5-.07 1.6-.65 1.83-1.29.23-.64.23-1.18.16-1.29-.06-.11-.24-.19-.51-.32z"/><path d="M16.01 4c-6.61 0-12 5.39-12 12 0 2.11.56 4.16 1.63 5.98L4 28l6.12-1.61A11.96 11.96 0 0 0 16.01 28c6.61 0 12-5.39 12-12s-5.39-12-12-12zm6.99 18.98c-.95.95-2.07 1.7-3.31 2.22-1.28.54-2.64.82-4.03.82-2.08 0-4.08-.61-5.79-1.77l-.41-.26-3.87 1.02 1.03-3.8-.27-.41a10.96 10.96 0 0 1-1.68-5.87c0-6.06 4.94-11 11-11 2.94 0 5.7 1.15 7.77 3.23A10.92 10.92 0 0 1 27 16c0 2.94-1.15 5.7-3.23 7.77z"/></svg>
+  </a>
+
+  <!-- CTA móvil -->
+  <div class="fixed inset-x-0 bottom-0 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur border-t border-slate-200 dark:border-slate-800 p-3 flex items-center justify-between">
+    <span class="text-sm">¿List@ para agendar?</span>
+    <div class="flex gap-2">
+      <a href="tel:+525524828819" class="px-4 py-2 rounded-xl border border-slate-300">Llamar</a>
+      <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-brand-600 text-white">WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    // Año
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menú móvil
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Dark mode toggle
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') root.classList.add('dark');
+    themeToggle?.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }});
+    }, {threshold:0.1});
+    revealEls.forEach(el => io.observe(el));
+
+    // Reducir logo al hacer scroll
+    const logo = document.querySelector('img[alt="OSADÍA Consultorio Dental"]');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80){ logo.classList.remove('h-[10rem]'); logo.classList.add('h-[4.9rem]'); }
+      else { logo.classList.remove('h-[4.9rem]'); logo.classList.add('h-[10rem]'); }
+    });
+
+    // -------- Dropdown Servicios: click, persistente, cierra con click-afuera / Esc --------
+    const svcBtn   = document.getElementById('svcBtn');
+    const svcPanel = document.getElementById('svcPanel');
+
+    function openSvc() {
+      svcPanel.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        svcPanel.classList.remove('opacity-0','translate-y-2');
+      });
+      svcBtn.setAttribute('aria-expanded','true');
+    }
+    function closeSvc() {
+      svcPanel.classList.add('opacity-0','translate-y-2');
+      svcBtn.setAttribute('aria-expanded','false');
+      // Espera la animación y oculta
+      setTimeout(() => { if (svcBtn.getAttribute('aria-expanded')==='false') svcPanel.classList.add('hidden'); }, 210);
+    }
+    function isOpen(){ return !svcPanel.classList.contains('hidden'); }
+
+    svcBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isOpen() ? closeSvc() : openSvc();
+    });
+
+    // Cerrar con click afuera
+    document.addEventListener('click', (e) => {
+      if (!svcPanel.contains(e.target) && !svcBtn.contains(e.target) && isOpen()) closeSvc();
+    });
+
+    // Cerrar con Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) closeSvc();
+    });
+  </script>
+<script>
+  // Calcula el offset para que los títulos no queden ocultos tras la barra fija
+  function setAnchorOffset() {
+    const promo  = document.getElementById('promoBar');
+    const nav    = document.getElementById('navbar');
+    const hPromo = promo ? promo.offsetHeight : 0;
+    const hNav   = nav   ? nav.offsetHeight   : 0;
+    const cushion = 12; // pequeño colchón visual
+    const total = hPromo + hNav + cushion;
+    document.documentElement.style.setProperty('--anchor-offset', total + 'px');
+  }
+
+  // Recalcula en carga, resize y cuando cambie el alto (por ejemplo, responsive)
+  window.addEventListener('load', setAnchorOffset);
+  window.addEventListener('resize', setAnchorOffset);
+
+  // Si cambias el tamaño del logo al hacer scroll, vuelve a medir
+  document.addEventListener('scroll', () => {
+    // Throttle simple
+    if (window.__anchorTick) return;
+    window.__anchorTick = true;
+    requestAnimationFrame(() => {
+      setAnchorOffset();
+      window.__anchorTick = false;
+    });
+  });
+
+  setAnchorOffset();
+</script>
+
+<script>
+  // ==== Resaltado de una sola opción activa en el NAV ====
+  (function () {
+    const ACTIVE = ['text-brand-700','border-b-2','border-brand-700','pb-0.5'];
+
+    const nav     = document.querySelector('header nav');
+    const links   = Array.from(nav.querySelectorAll('a.navlink[href]')); // Nosotros, Equipo, Precios, etc.
+    const svcBtn  = document.getElementById('svcBtn');
+    const svcPanel= document.getElementById('svcPanel');
+
+    function clearActive() {
+      links.forEach(a => a.classList.remove(...ACTIVE));
+      svcBtn?.classList.remove(...ACTIVE);
+    }
+    function setActiveLink(a) {
+      clearActive();
+      a.classList.add(...ACTIVE);
+    }
+    function setActiveServices() {
+      clearActive();
+      svcBtn?.classList.add(...ACTIVE);
+    }
+
+    // Click en enlaces: activa solo ese enlace
+    links.forEach(a => a.addEventListener('click', () => setActiveLink(a)));
+
+    // Observador de secciones: activa según scroll (para anchors #equipo, #precios, etc.)
+    const anchors = links
+      .filter(a => a.getAttribute('href').startsWith('#'))
+      .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+      .filter(Boolean);
+
+    const io = new IntersectionObserver((entries) => {
+      // sección más visible
+      const best = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if (best) {
+        const match = links.find(a => a.getAttribute('href') === '#'+best.target.id);
+        if (match) setActiveLink(match);
+      }
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: [0.25,0.5,0.75] });
+    anchors.forEach(sec => io.observe(sec));
+
+    // Sincroniza con abrir/cerrar Servicios
+    // Si ya tienes funciones openSvc/closeSvc, las encadenamos:
+    const _openSvc  = window.openSvc;
+    const _closeSvc = window.closeSvc;
+    window.openSvc  = function(){ _openSvc?.();  setActiveServices(); };
+    window.closeSvc = function(){ _closeSvc?.(); /* opcional: no marcar nada aquí */ };
+
+    // Si no usas esas funciones, observa aria-expanded del botón
+    const mo = new MutationObserver(() => {
+      if (svcBtn?.getAttribute('aria-expanded') === 'true') setActiveServices();
+    });
+    svcBtn && mo.observe(svcBtn, { attributes:true, attributeFilter:['aria-expanded'] });
+
+    // Si la página carga con hash (#contacto, etc.)
+    if (location.hash) {
+      const pre = links.find(a => a.getAttribute('href') === location.hash);
+      if (pre) setActiveLink(pre);
+    }
+  })();
+</script>
+
+</body>
+</html>
