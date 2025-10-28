@@ -112,7 +112,22 @@
   <!-- Header -->
   <header id="navbar" class="sticky top-8 z-40 backdrop-blur bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-      <a href="#inicio" class="flex items-center gap-3" aria-label="OSADÍA Consultorio Dental">
+ <div class="md:hidden flex items-center justify-between w-full">
+      <!-- Botón hamburguesa (izquierda) -->
+      <button id="mobBtn" aria-controls="mobPanel" aria-expanded="false" aria-label="Abrir menú"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-700">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Logo derecho (móvil) -->
+      <a href="#inicio" class="flex items-center gap-2" aria-label="OSADÍA Consultorio Dental">
+        <img src="./osadia-logo.jpg" alt="OSADÍA Consultorio Dental" class="h-10 w-auto rounded-lg" />
+        <span class="sr-only">OSADÍA Consultorio Dental</span>
+      </a>
+    </div>
+      <a href="#inicio" class="hidden md:flex items-center gap-3" aria-label="OSADÍA Consultorio Dental">
         <img id="logo" src="./osadia-logo.jpg" alt="OSADÍA Consultorio Dental"
              class="h-[10rem] w-auto rounded-lg transition-all duration-300 ease-in-out" />
         <span class="sr-only">OSADÍA Consultorio Dental</span>
@@ -212,17 +227,6 @@
       </div>
     </div>
 
-<!-- NAV MOBILE: visible solo en < md -->
-<div class="md:hidden flex items-center justify-between gap-3 py-2">
-  <!-- Botón hamburguesa -->
-  <button id="mobBtn" aria-controls="mobPanel" aria-expanded="false" aria-label="Abrir menú"
-          class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-700">
-    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-  </button>
-</div>
-
 <!-- Overlay + Panel -->
 <div id="mobOverlay"
      class="md:hidden fixed inset-0 z-[60] hidden opacity-0 transition-opacity duration-200 bg-slate-900/40"></div>
@@ -243,7 +247,7 @@
 
     <!-- Links / acordeones -->
     <div class="px-2 py-2">
-      <a href="nosotros.html" class="mobLink">Nosotros</a>
+      <a href="#nosotros" class="mobLink">Nosotros</a>
       <a href="#equipo" class="mobLink">Equipo</a>
 
       <!-- Acordeón Servicios -->
