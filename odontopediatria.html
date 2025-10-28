@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odontopediatría | OSADÍA Consultorio Dental</title>
+  <link rel="icon" type="image/x-icon" href="corazon-rosa.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {50:'#E6FCF7',100:'#C1F6EA',200:'#97EEDC',300:'#6BE6CD',400:'#36D9BC',500:'#12C4A7',600:'#0EA18A',700:'#0C8673',800:'#0A6C5D',900:'#084E43'},
+            accent: {50:'#FFE9F1',100:'#FFD0E1',200:'#FFB0CD',300:'#FF8BB6',400:'#FF6AA3',500:'#FF4D92',600:'#E43E82',700:'#C4316E',800:'#9F285B',900:'#7E214B'}
+          },
+          boxShadow: { soft: '0 12px 30px -12px rgba(16,24,40,.15)'}
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-slate-800 font-sans">
+ <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto p-4 flex items-center justify-between relative">
+
+    <!-- Logo -->
+    <a href="index.html#servicios" class="flex items-center gap-3">
+      <img src="osadia-logo.jpg" alt="OSADÍA Consultorio Dental" class="h-24 w-auto rounded-lg">
+    </a>
+
+    <!-- Texto centrado -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 text-center leading-tight">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-brand-700">Servicios dentales</h1>
+      <p class="text-slate-600 text-sm md:text-lg mt-1">Cuidado dental especializado para niñas y niños</p>
+    </div>
+
+    <!-- Botones -->
+    <div class="flex gap-3">
+      <a href="https://wa.me/525524828819?text=Hola%20quiero%20cita%20de%20odontopediatr%C3%ADa" target="_blank"
+         class="inline-flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-xl hover:bg-brand-700 shadow-soft">
+        WhatsApp
+      </a>
+      <a href="tel:+525524828819"
+         class="inline-flex items-center px-4 py-2 rounded-xl border border-slate-300 bg-white/90 backdrop-blur hover:border-slate-400 shadow-soft">
+        Llamar
+      </a>
+    </div>
+
+  </div>
+</header>
+
+
+  <main class="max-w-6xl mx-auto py-12 px-4">
+    <section class="grid md:grid-cols-2 gap-10 items-center bg-white border border-slate-200 rounded-3xl p-8 shadow-soft">
+      <div class="order-2 md:order-1">
+        <h1 class="text-4xl font-extrabold mb-4">Odontopediatría</h1>
+        <p class="mb-4 text-slate-600">Cuidado dental para bebés, niñas y niños. Fomentamos hábitos saludables y una experiencia positiva desde la primera visita.</p>
+        <h2 class="font-semibold mb-2">¿Por qué es importante?</h2>
+        <p class="mb-4 text-slate-700">Previene caries, mantiene una sonrisa sana y crea confianza al visitar al dentista.</p>
+        <h3 class="font-semibold mb-2">Ventajas</h3>
+        <ul class="list-disc pl-5 mb-4 text-slate-700">
+          <li>Previene problemas futuros.</li>
+          <li>Promueve buenos hábitos de higiene.</li>
+          <li>Detecta y corrige a tiempo alteraciones del crecimiento.</li>
+        </ul>
+        <p class="font-semibold">Edad recomendada</p>
+        <p class="mb-6">Desde la salida del primer diente o cerca del primer año.</p>
+      </div>
+
+<div class="order-1 md:order-2 flex justify-center">
+  <div class="relative w-[26rem] h-[26rem] md:w-[30rem] md:h-[30rem]">
+    <img src="odontopediatria1.jpg" alt="Odontopediatría" 
+         class="w-full h-full object-cover rounded-3xl border border-slate-200 shadow-soft">
+  </div>
+</div>
+
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-slate-500 py-6 border-t border-slate-200">
+    © <span id="year"></span> OSADÍA Consultorio Dental · Nezahualcóyotl
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Barra inferior fija de promoción -->
+  <div id="promoBar" class="fixed bottom-0 left-0 right-0 z-50">
+    <div class="mx-auto max-w-6xl">
+      <div class="m-3 rounded-2xl bg-gradient-to-r from-accent-500 to-brand-600 text-white px-4 py-3 shadow-soft flex items-center gap-3">
+        <span class="text-sm md:text-base font-semibold">Promo del mes: Primera valoración <u>GRATIS</u> para peques + recomendaciones personalizadas.</span>
+        <a href="https://wa.me/525524828819?text=Hola%20quiero%20aprovechar%20la%20promo%20de%20odontopediatr%C3%ADa" target="_blank" class="ml-auto bg-white/90 text-slate-900 px-4 py-2 rounded-xl hover:bg-white">Agendar ahora</a>
+        <button aria-label="Cerrar promoción" class="ml-2 px-2 py-1/2 rounded-lg hover:bg-white/10" onclick="document.getElementById('promoBar').style.display='none'">✕</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
