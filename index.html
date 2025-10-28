@@ -48,6 +48,17 @@
   .anchor { scroll-margin-top: var(--anchor-offset); }
 </style>
 
+<style>
+  .mobLink{display:block;padding:.9rem 1rem;border-radius:.8rem;color:#0f172a}
+  .mobLink:hover{background:#F1F5F9;color:#0C8673}
+  .mobSect{font-size:.78rem;font-weight:700;letter-spacing:.02em;color:#64748B;margin:.4rem .25rem .4rem}
+  /* Reusamos tus estilos de iconos desktop para móvil */
+  .svcItem{display:flex;align-items:center;gap:.65rem;padding:.48rem .35rem;border-radius:.9rem}
+  .svcItem:hover{color:#0C8673;background:rgba(18,196,167,.06)}
+  .svcIcon{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9999px;background:#E6F0FE}
+  .svcSvg{width:18px;height:18px}
+</style>
+
   <!-- Schema.org -->
   <script type="application/ld+json">
   {
@@ -84,8 +95,7 @@
   <!-- TODO: Actualiza con tu dominio real -->
   <link rel="canonical" href="https://tudominio.com">
 <style>
-  .svcItem{display:flex;align-items:center;gap:.65rem;padding:.38rem .25rem;border-radius:.9rem}
-  .svcItem:hover{color:#0C8673;background:rgba(18,196,167,.06)}
+   .svcItem:hover{color:#0C8673;background:rgba(18,196,167,.06)}
   .svcIcon{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9999px;background:#E6F0FE}
   .svcSvg{width:18px;height:18px}
 </style>
@@ -200,52 +210,97 @@
         <a href="tel:+525524828819" class="inline-flex items-center px-4 py-2 rounded-xl border border-slate-300 hover:border-slate-400">Llamar</a>
         <button id="themeToggle" class="p-2 rounded-lg border border-slate-300 hover:border-slate-400" aria-label="Cambiar tema">🌓</button>
       </div>
-
-      <!-- Botón menú móvil -->
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-300" aria-label="Abrir menú">☰</button>
     </div>
 
-    <!-- MENÚ MÓVIL -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
-      <div class="px-4 py-3 grid gap-3 text-sm">
-        <!-- Acordeón Servicios -->
-        <details class="rounded-xl border border-slate-200 dark:border-slate-800 p-3">
-          <summary class="font-medium cursor-pointer">Servicios</summary>
-          <ul class="mt-2 grid gap-2 pl-2">
-            <li><a class="block py-1" href="#servicios">Diagnóstico 360°</a></li>
-            <li><a class="block py-1" href="#servicios">Implantes</a></li>
-            <li><a class="block py-1" href="#servicios">Limpieza dental</a></li>
-            <li><a class="block py-1" href="#servicios">Coronas dentales</a></li>
-            <li><a class="block py-1" href="#servicios">Resinas dentales</a></li>
-            <li><a class="block py-1" href="#servicios">Cirugía Maxilofacial</a></li>
-            <li><a class="block py-1" href="endodoncia.html">Endodoncia</a></li>
-            <li><a class="block py-1" href="#servicios">Periodoncia</a></li>
-            <li><a class="block py-1" href="#servicios">Guarda oclusal</a></li>
-            <li><a class="block py-1" href="#servicios">Puentes dentales</a></li>
-            <li><a class="block py-1" href="#servicios">Alineadores</a></li>
-            <li><a class="block py-1" href="#servicios">Invisalign</a></li>
-            <li><a class="block py-1" href="#servicios">Clear Correct</a></li>
-            <li><a class="block py-1" href="#servicios">Brackets</a></li>
-            <li><a class="block py-1" href="#servicios">Blanqueamiento</a></li>
-            <li><a class="block py-1" href="#servicios">Carillas</a></li>
-            <li><a class="block py-1" href="odontopediatria.html">Limpieza dental para niños</a></li>
-            <li><a class="block py-1" href="#servicios">Selladores</a></li>
-            <li><a class="block py-1" href="#servicios">Ortopedia</a></li>
-            <li><a class="block py-1" href="#servicios">Extractores</a></li>
-          </ul>
-        </details>
+<!-- NAV MOBILE: visible solo en < md -->
+<div class="md:hidden flex items-center justify-between gap-3 py-2">
+  <!-- Botón hamburguesa -->
+  <button id="mobBtn" aria-controls="mobPanel" aria-expanded="false" aria-label="Abrir menú"
+          class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-700">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</div>
 
-        <a href="#equipo" class="hover:text-brand-700">Equipo</a>
-        <a href="#precios" class="hover:text-brand-700">Precios</a>
-        <a href="#opiniones" class="hover:text-brand-700">Testimonios</a>
-        <a href="#faq" class="hover:text-brand-700">FAQ</a>
-        <a href="#contacto" class="hover:text-brand-700">Contacto</a>
-        <div class="flex gap-2">
-          <a href="https://wa.me/525524828819?text=Hola%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 transition shadow-sm w-max">WhatsApp</a>
-          <a href="tel:+525524828819" class="inline-flex items-center px-4 py-2 rounded-xl border border-slate-300 hover:border-slate-400 w-max">Llamar</a>
+<!-- Overlay + Panel -->
+<div id="mobOverlay"
+     class="md:hidden fixed inset-0 z-[60] hidden opacity-0 transition-opacity duration-200 bg-slate-900/40"></div>
+
+<nav id="mobPanel" role="dialog" aria-modal="true"
+     class="md:hidden fixed left-0 right-0 top-0 z-[61] hidden opacity-0 -translate-y-4 transition-all duration-200">
+  <div class="mx-3 mt-2 rounded-2xl bg-white shadow-2xl border border-slate-200 overflow-hidden">
+    <!-- Cabecera del panel -->
+    <div class="flex items-center justify-between px-4 py-3 border-b border-slate-200">
+      <span class="text-sm font-semibold text-slate-600">Menú</span>
+      <button id="mobClose" aria-label="Cerrar menú"
+              class="inline-flex w-9 h-9 items-center justify-center rounded-lg border border-slate-300">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Links / acordeones -->
+    <div class="px-2 py-2">
+      <a href="nosotros.html" class="mobLink">Nosotros</a>
+      <a href="#equipo" class="mobLink">Equipo</a>
+
+      <!-- Acordeón Servicios -->
+      <div class="mt-1">
+        <button id="mobSvcBtn" aria-controls="mobSvcPanel" aria-expanded="false"
+                class="w-full mobLink flex items-center justify-between">
+          <span>Servicios</span>
+          <svg id="mobSvcChevron" class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+
+        <div id="mobSvcPanel" class="hidden px-2 pb-2 pt-1">
+          <!-- Clínicos -->
+          <p class="mobSect">Tratamientos Clínicos</p>
+          <ul class="space-y-1">
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/diagnostico-360.svg" alt=""></span> Diagnóstico 360°</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/implantes.svg" alt=""></span> Implantes</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/limpieza.svg" alt=""></span> Limpieza dental</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/coronas.svg" alt=""></span> Coronas dentales</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/resinas.svg" alt=""></span> Resinas dentales</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/cirugia-maxilofacial.svg" alt=""></span> Cirugía Maxilofacial</a></li>
+            <li><a class="svcItem" href="endodoncia.html"><span class="svcIcon"><img class="svcSvg" src="icons/endodoncia.svg" alt=""></span> Endodoncia</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/periodoncia.svg" alt=""></span> Periodoncia</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/guarda-oclusal.svg" alt=""></span> Guarda oclusal</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/puentes.svg" alt=""></span> Puentes dentales</a></li>
+          </ul>
+
+          <!-- Estéticos -->
+          <p class="mobSect mt-3">Tratamientos Estéticos</p>
+          <ul class="space-y-1">
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/alineadores.svg" alt=""></span> Alineadores</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/invisalign.svg" alt=""></span> Invisalign</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/clear-correct.svg" alt=""></span> Clear Correct</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/brackets.svg" alt=""></span> Brackets</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/blanqueamiento.svg" alt=""></span> Blanqueamiento</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/carillas.svg" alt=""></span> Carillas</a></li>
+          </ul>
+
+          <!-- Infantiles -->
+          <p class="mobSect mt-3">Tratamientos Infantiles</p>
+          <ul class="space-y-1">
+            <li><a class="svcItem" href="odontopediatria.html"><span class="svcIcon"><img class="svcSvg" src="icons/limpieza-ninos.svg" alt=""></span> Limpieza dental para niños</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/selladores.svg" alt=""></span> Selladores</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcIcon"><img class="svcSvg" src="icons/ortopedia.svg" alt=""></span> Ortopedia</a></li>
+            <li><a class="svcItem" href="#servicios"><span class="svcSvg" src="icons/extractores.svg" alt=""></span> Extractores</a></li>
+          </ul>
         </div>
       </div>
+
+      <a href="#precios" class="mobLink mt-1">Precios</a>
+      <a href="#opiniones" class="mobLink">Testimonios</a>
+      <a href="#faq" class="mobLink">FAQ</a>
+      <a href="#contacto" class="mobLink">Contacto</a>
     </div>
+  </div>
+</nav>
+
   </header>
 
   <!-- Hero -->
@@ -321,45 +376,55 @@
         <h2 class="text-3xl font-bold">Servicios dentales</h2>
         <p class="text-slate-600 dark:text-slate-300 mt-2">Tratamientos integrales para toda la familia.</p>
       </div>
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
-          <img src="./profilaxis.jpg" alt="Profilaxis" class="w-full h-52 object-cover rounded-lg mb-3"/>
-          <h3 class="font-semibold">Limpieza y profilaxis</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Elimina sarro y placa, incluye pulido y recomendaciones personalizadas.</p>
-        </article>
-        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
-          <img src="./resina.jpg" alt="Resinas estéticas" class="w-full h-52 object-cover rounded-lg mb-3"/>
-          <h3 class="font-semibold">Resinas estéticas</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Restauraciones del color del diente con acabado natural.</p>
-        </article>
-<a href="endodoncia.html" class="block hover:scale-[1.02] transition-transform">
-        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
-          <img src="./endodoncia.jpg" alt="Endodoncia" class="w-full h-52 object-cover rounded-lg mb-3"/>
-          <h3 class="font-semibold">Endodoncia</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Tratamiento de conductos para conservar piezas con dolor o infección.</p>
-        </article>
-</a>
-        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
-          <img src="./ortodoncia.jpg" alt="Ortodoncia" class="w-full h-52 object-cover rounded-lg mb-3"/>
-          <h3 class="font-semibold">Ortodoncia</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Alineadores y brackets para corregir malposiciones dentales.</p>
-        </article>
-        <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
-          <img src="./protesis.jpg" alt="Prótesis y rehabilitación" class="w-full h-52 object-cover rounded-lg mb-3"/>
-          <h3 class="font-semibold">Prótesis y rehabilitación</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Puentes, coronas e implantes en coordinación con especialistas.</p>
-        </article>
-        <a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
-          <article class="bg-white rounded-xl shadow-md overflow-hidden">
-            <img src="./odontopediatria.jpg" alt="Odontopediatría" class="w-full h-48 object-cover">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Odontopediatría</h3>
-              <p class="text-gray-600 text-sm">Atención especializada para los más pequeños con técnicas suaves y seguras.</p>
-            </div>
-          </article>
-        </a>
-      </div>
-    </div>
+<div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+    <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+      <img src="./profilaxis.jpg" alt="Profilaxis" class="w-full h-52 object-cover rounded-lg mb-3"/>
+      <h3 class="font-semibold">Limpieza y profilaxis</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Elimina sarro y placa, incluye pulido y recomendaciones personalizadas.</p>
+    </article>
+  </a>
+
+  <a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+    <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+      <img src="./resina.jpg" alt="Resinas estéticas" class="w-full h-52 object-cover rounded-lg mb-3"/>
+      <h3 class="font-semibold">Resinas estéticas</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Restauraciones del color del diente con acabado natural.</p>
+    </article>
+  </a>
+
+  <a href="endodoncia.html" class="block hover:scale-[1.02] transition-transform">
+    <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+      <img src="./endodoncia.jpg" alt="Endodoncia" class="w-full h-52 object-cover rounded-lg mb-3"/>
+      <h3 class="font-semibold">Endodoncia</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Tratamiento de conductos para conservar piezas con dolor o infección.</p>
+    </article>
+  </a>
+
+  <a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+    <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+      <img src="./ortodoncia.jpg" alt="Ortodoncia" class="w-full h-52 object-cover rounded-lg mb-3"/>
+      <h3 class="font-semibold">Ortodoncia</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Alineadores y brackets para corregir malposiciones dentales.</p>
+    </article>
+  </a>
+
+  <a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+    <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+      <img src="./protesis.jpg" alt="Prótesis y rehabilitación" class="w-full h-52 object-cover rounded-lg mb-3"/>
+      <h3 class="font-semibold">Prótesis y rehabilitación</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Puentes, coronas e implantes en coordinación con especialistas.</p>
+    </article>
+  </a>
+
+  <a href="odontopediatria.html" class="block hover:scale-[1.02] transition-transform">
+    <article class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900 reveal">
+      <img src="./odontopediatria.jpg" alt="Odontopediatría" class="w-full h-52 object-cover rounded-lg mb-3"/>
+      <h3 class="font-semibold">Odontopediatría</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Atención especializada para los más pequeños con técnicas suaves y seguras.</p>
+    </article>
+  </a>
+</div>
   </section>
 
   <!-- Galería -->
@@ -762,13 +827,56 @@
   </div>
 
   <script>
+
+
     // Año
     document.getElementById('year').textContent = new Date().getFullYear();
+(function(){
+    const root = document.documentElement;
+    const btn = document.getElementById('mobBtn');
+    const close = document.getElementById('mobClose');
+    const panel = document.getElementById('mobPanel');
+    const overlay = document.getElementById('mobOverlay');
+    const svcBtn = document.getElementById('mobSvcBtn');
+    const svcChevron = document.getElementById('mobSvcChevron');
+    const svcPanel = document.getElementById('mobSvcPanel');
 
-    // Menú móvil
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+    function openMob(){
+      overlay.classList.remove('hidden'); panel.classList.remove('hidden');
+      requestAnimationFrame(()=>{
+        overlay.classList.remove('opacity-0');
+        panel.classList.remove('opacity-0','-translate-y-4');
+      });
+      btn.setAttribute('aria-expanded','true');
+      root.style.overflow='hidden'; // bloquear scroll
+    }
+    function closeMob(){
+      overlay.classList.add('opacity-0');
+      panel.classList.add('opacity-0','-translate-y-4');
+      btn.setAttribute('aria-expanded','false');
+      setTimeout(()=>{ overlay.classList.add('hidden'); panel.classList.add('hidden'); root.style.overflow=''; },200);
+    }
+    btn?.addEventListener('click', openMob);
+    close?.addEventListener('click', closeMob);
+    overlay?.addEventListener('click', closeMob);
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !panel.classList.contains('hidden')) closeMob(); });
+
+    // Acordeón Servicios
+    function toggleSvc(){
+      const isOpen = svcBtn.getAttribute('aria-expanded')==='true';
+      if(isOpen){
+        svcPanel.classList.add('hidden'); svcBtn.setAttribute('aria-expanded','false'); svcChevron.classList.remove('rotate-180');
+      }else{
+        svcPanel.classList.remove('hidden'); svcBtn.setAttribute('aria-expanded','true'); svcChevron.classList.add('rotate-180');
+      }
+    }
+    svcBtn?.addEventListener('click', toggleSvc);
+
+    // Cerrar al navegar a un anchor
+    document.querySelectorAll('#mobPanel a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', closeMob);
+    });
+  })();
 
     // Dark mode toggle
     const root = document.documentElement;
