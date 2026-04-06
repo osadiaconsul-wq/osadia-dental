@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ortodoncia | OSADÍA Consultorio Dental</title>
+  <meta name="description" content="Ortodoncia con brackets y alineadores. Corrige tu sonrisa con un plan accesible. Pago inicial $4,500 y mensualidades de $500." />
+  <link rel="icon" type="image/x-icon" href="corazon-rosa.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {50:'#E6FCF7',100:'#C1F6EA',200:'#97EEDC',300:'#6BE6CD',400:'#36D9BC',500:'#12C4A7',600:'#0EA18A',700:'#0C8673',800:'#0A6C5D',900:'#084E43'},
+            accent:{50:'#FFE9F1',100:'#FFD0E1',200:'#FFB0CD',300:'#FF8BB6',400:'#FF6AA3',500:'#FF4D92',600:'#E43E82',700:'#C4316E',800:'#9F285B',900:'#7E214B'}
+          },
+          boxShadow:{ soft:'0 12px 30px -12px rgba(16,24,40,.15)' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+  /* FLOTACIÓN SUAVE */
+  @keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .float-icon {
+    animation: floatIcon 3.2s ease-in-out infinite;
+  }
+
+  /* SOMBRA REALISTA DEL ICONO */
+  .icon-shadow {
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.18));
+  }
+</style>
+
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+  <!-- HEADER IGUAL A PRÓTESIS -->
+  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between relative">
+      <a href="index.html#servicios" class="flex items-center gap-3">
+        <img src="osadia-logo.webp" alt="OSADÍA Consultorio Dental" class="h-24 w-auto rounded-lg">
+      </a>
+
+      <!-- Título centrado -->
+      <div class="absolute left-1/2 -translate-x-1/2 text-center leading-tight">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-brand-700">
+          Ortodoncia
+        </h1>
+        <p class="text-slate-600 text-sm md:text-lg mt-1">
+          Brackets y alineadores para alinear tu sonrisa
+        </p>
+      </div>
+
+      <!-- Botones -->
+      <div class="flex gap-3">
+        <a href="https://wa.me/525524828819?text=Hola%20quiero%20informes%20sobre%20ortodoncia"
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-xl hover:bg-brand-700 shadow-soft">
+          WhatsApp
+        </a>
+        <a href="tel:+525524828819"
+           class="inline-flex items-center px-4 py-2 rounded-xl border border-slate-300 bg-white hover:border-slate-400 shadow-soft">
+          Llamar
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- CONTENIDO -->
+  <main class="max-w-6xl mx-auto py-12 px-4 space-y-12">
+
+    <!-- HERO PRINCIPAL -->
+    <section class="grid md:grid-cols-2 gap-10 bg-white border border-slate-200 rounded-3xl p-8 shadow-soft items-start">
+
+      <!-- TEXTO -->
+      <div class="order-2 md:order-1">
+        <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-700 mb-3">
+          ✨ Sonrisas alineadas y funcionales
+        </p>
+
+        <h2 class="text-4xl font-extrabold mb-4 leading-tight">
+          <span class="text-brand-600 block">¿Qué es la ortodoncia?</span>
+        </h2>
+
+        <p class="mb-4 text-slate-700">
+          La ortodoncia corrige la posición de los dientes y la mordida. Ayuda a mejorar la estética, la función al masticar
+          y la salud de tus dientes a largo plazo.
+        </p>
+
+        <h3 class="font-semibold mb-2">Tratamientos disponibles</h3>
+        <ul class="list-disc pl-5 mb-4 text-slate-700">
+          <li>Brackets metálicos</li>
+          <li>Brackets estéticos</li>
+          <li>Alineadores transparentes</li>
+        </ul>
+
+        <h3 class="font-semibold mb-2">¿Para quién es?</h3>
+        <p class="mb-6 text-slate-700">
+          Para quienes presentan dientes chuecos, apiñamiento, separación, mordida abierta, profunda o desviada.
+        </p>
+
+<!-- PROMOCIÓN PRINCIPAL (DISEÑO COMPACTO) -->
+<div class="rounded-2xl bg-white border border-brand-200 shadow-soft mb-6 overflow-hidden">
+
+  <!-- barra superior de color -->
+  <div class="h-1 bg-gradient-to-r from-brand-500 to-accent-500"></div>
+
+  <div class="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+    <!-- texto -->
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-wide text-brand-600 flex items-center gap-2">
+        <span>🔥</span>
+        <span>Promoción en ortodoncia CLASICA</span>
+      </p>
+
+      <p class="mt-2 text-sm text-slate-700">
+        Pago inicial:
+        <span class="font-semibold text-brand-700">$4,500</span><br>
+        Mensualidades desde:
+        <span class="font-semibold text-brand-700">$500</span>
+      </p>
+
+      <p class="mt-1 text-xs text-slate-500">
+        Válido en valoración y planes seleccionados.
+      </p>
+    </div>
+
+    <!-- botón -->
+    <div class="sm:flex sm:items-center sm:justify-end">
+      <a href="https://wa.me/525524828819?text=Hola%20quiero%20la%20promoción%20de%20ortodoncia"
+         target="_blank"
+         class="inline-flex justify-center items-center px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-soft">
+        Aprovechar promoción
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+      </div>
+
+      <!-- IMAGEN -->
+      <div class="order-1 md:order-2 flex justify-center items-start">
+        <div class="relative w-[26rem] h-[26rem] md:w-[30rem] md:h-[30rem]">
+          <img src="ortodoncia1.webp" alt="Ortodoncia OSADÍA"
+               class="w-full h-full object-cover rounded-3xl border border-slate-200 shadow-soft">
+          <div class="absolute -bottom-4 left-4 bg-white/90 border border-slate-200 rounded-2xl px-4 py-2 text-xs shadow-soft">
+            ⭐ Transforma tu sonrisa desde la primera cita
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- TARJETAS INFORMACIÓN – IGUAL A PRÓTESIS -->
+    <section class="rounded-3xl bg-slate-50 border border-slate-200 p-8">
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft">
+          <h3 class="text-lg font-semibold mb-2">¿Cuándo es necesaria?</h3>
+          <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+            <li>Dientes chuecos o apiñados</li>
+            <li>Mordida abierta o profunda</li>
+            <li>Mandíbula desviada</li>
+            <li>Espacios entre dientes</li>
+          </ul>
+        </article>
+
+        <article class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft">
+          <h3 class="text-lg font-semibold mb-2">¿Cómo es el proceso?</h3>
+          <ol class="list-decimal pl-5 text-sm text-slate-700 space-y-1">
+            <li>Valoración y diagnóstico</li>
+            <li>Toma de estudios (fotografías y modelos)</li>
+            <li>Colocación de brackets o alineadores</li>
+            <li>Revisiones mensuales</li>
+          </ol>
+        </article>
+
+        <article class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft">
+          <h3 class="text-lg font-semibold mb-2">Beneficios</h3>
+          <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+            <li>Sonrisa más estética</li>
+            <li>Mordida funcional</li>
+            <li>Menos desgaste dental</li>
+            <li>Mejor higiene oral</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN: TE EXPLICAMOS / PAGOS / SEGUIMIENTO (ESTILO PRÓTESIS) -->
+    <section class="rounded-3xl bg-slate-50 border border-slate-200 p-8">
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft">
+          <h3 class="text-lg font-semibold mb-2">Te explicamos todo con calma</h3>
+          <p class="text-sm text-slate-700">
+            Vemos tus estudios, revisamos tu mordida y te presentamos
+            <strong>2–3 opciones</strong> (brackets metálicos, estéticos o alineadores)
+            con ventajas, tiempos y costos claros para que elijas lo que mejor
+            se adapta a ti.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft">
+          <h3 class="text-lg font-semibold mb-2">Facilidades de pago en tu ortodoncia</h3>
+          <p class="text-sm text-slate-700">
+            Comenzamos con un <strong>pago inicial de $4,500</strong> y
+            <strong>mensualidades desde $500</strong>. Dividimos tu tratamiento por
+            etapas para que el pago sea <strong>lo más cómodo posible</strong>.
+            Pregunta por las opciones disponibles en tu valoración.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft">
+          <h3 class="text-lg font-semibold mb-2">Seguimiento y ajustes</h3>
+          <p class="text-sm text-slate-700">
+            Después de la colocación agendamos <strong>revisiones mensuales</strong>
+            para ajustar tus brackets o alineadores, resolver dudas y asegurarnos
+            de que muerdas cómodo. Si hace falta, ajustamos hasta que estés a gusto.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="rounded-3xl bg-white border border-slate-200 p-8 shadow-soft">
+      <h2 class="text-2xl font-bold mb-4">Preguntas frecuentes</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <details class="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-soft">
+          <summary class="font-semibold cursor-pointer">¿Duele ponerse brackets?</summary>
+          <p class="text-sm text-slate-600 mt-2">
+            Solo hay ligeras molestias al inicio o en ajustes. Son temporales.
+          </p>
+        </details>
+
+        <details class="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-soft">
+          <summary class="font-semibold cursor-pointer">¿Cada cuándo son las citas?</summary>
+          <p class="text-sm text-slate-600 mt-2">
+            Normalmente cada 4 semanas para ajustes y revisiones.
+          </p>
+        </details>
+
+        <details class="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-soft">
+          <summary class="font-semibold cursor-pointer">¿Cuánto dura el tratamiento?</summary>
+          <p class="text-sm text-slate-600 mt-2">
+            De 12 a 24 meses según cada caso.
+          </p>
+        </details>
+
+        <details class="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-soft">
+          <summary class="font-semibold cursor-pointer">¿Atienden adolescentes y adultos?</summary>
+          <p class="text-sm text-slate-600 mt-2">
+            Sí, trabajamos ortodoncia para todas las edades.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+<!-- CTA FINAL (DEGRADADO) -->
+<section class="mt-2 mb-4">
+  <div class="cta-glow rounded-3xl bg-gradient-to-r from-brand-600 to-accent-500 text-white p-8 shadow-soft flex flex-col md:flex-row items-center gap-8">
+
+    <!-- Texto principal -->
+    <div class="flex-1 space-y-3">
+      <h2 class="text-2xl md:text-3xl font-extrabold">
+        Empieza hoy tu tratamiento de ortodoncia.
+      </h2>
+
+      <p class="text-sm md:text-base text-white/90">
+        Alinea tu sonrisa con brackets o alineadores. Agenda tu valoración y aprovecha la promoción:
+        <strong class="text-white">Inicial $4,500 + mensualidades desde $500</strong>.
+      </p>
+
+      <!-- Mini beneficios con iconos grandes + flotación real -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs md:text-sm mt-4">
+
+  <!-- Brackets -->
+  <div class="flex items-center gap-3">
+    <div class="w-16 h-16 rounded-full bg-white/30 backdrop-blur-xl flex items-center justify-center float-icon icon-shadow">
+      <img src="icons/1.svg" alt="Brackets" class="w-14 h-14">
+    </div>
+    <span class="leading-tight">Brackets metálicos y estéticos</span>
+  </div>
+
+  <!-- Alineadores -->
+  <div class="flex items-center gap-3">
+    <div class="w-16 h-16 rounded-full bg-white/30 backdrop-blur-xl flex items-center justify-center float-icon icon-shadow" style="animation-delay:.4s">
+      <img src="icons/2.svg" alt="Alineadores" class="w-14 h-14">
+    </div>
+    <span class="leading-tight">Alineadores transparentes</span>
+  </div>
+
+  <!-- Pagos -->
+  <div class="flex items-center gap-3">
+    <div class="w-16 h-16 rounded-full bg-white/30 backdrop-blur-xl flex items-center justify-center float-icon icon-shadow" style="animation-delay:.8s">
+      <img src="icons/3.svg" alt="Pagos" class="w-14 h-14">
+    </div>
+    <span class="leading-tight">Plan de pagos accesible</span>
+  </div>
+
+</div>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="flex flex-col gap-3 w-full md:w-auto">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/525524828819?text=Hola%2C%20quiero%20informes%20y%20la%20promoci%C3%B3n%20de%20ortodoncia"
+         target="_blank"
+         class="inline-flex justify-center items-center px-6 py-3 rounded-2xl bg-white text-brand-700 font-semibold shadow-soft text-sm md:text-base hover:scale-[1.03] hover:shadow-lg transition">
+        Enviar mensaje por WhatsApp
+      </a>
+
+      <!-- Prefiero que me llamen -->
+      <a href="tel:+525524828819"
+         class="inline-flex justify-center items-center px-6 py-2 rounded-2xl border border-white/70 text-white text-sm md:text-base hover:bg-white/10 transition">
+        Prefiero que me llamen
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="text-center text-sm text-slate-500 py-6 border-t border-slate-200 bg-white">
+    © <span id="year"></span> OSADÍA Consultorio Dental · Nezahualcóyotl
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
